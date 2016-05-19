@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>:)</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="js/moment.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+	<body>
+
+		<div id="time">
+		</div>
+
+		<hr>
+
+		<div class="transit">
+			<h1>J-Church</h1>
+			<div id="j"></div>
+		<div>
+
+		<div class="transit">
+			<h1>Bart</h1>
+			<div id="bart"></div>
+		<div>
+
+		<script type="text/javascript">
+		(function()
+		{
+		  // instantiate a moment object
+		  var day = moment().format('dddd');
+			var date = moment().format('MMMM Do YYYY');
+
+		  // display value of moment object in #displayMoment div
+		  var display = document.getElementById('time');
+		  display.innerHTML = day + "<br>" + date;
+		})();
+		</script>
+
+	</body>
+	<script src="js/meep.js"></script>
+</html>
