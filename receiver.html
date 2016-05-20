@@ -20,6 +20,11 @@ limitations under the License.
 	  body {
 	    overflow:hidden;
 	  }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
       div{
 	    height:720PX;
 	    width:1280PX;
@@ -37,7 +42,7 @@ limitations under the License.
     <title>Cast Hello Text</title>
   </head>
   <body>
-	<DIV id="message">wut to me</DIV>
+	<iframe src="http://dianavtran.github.io/muni-bart/index.html" id="message"></iframe>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
