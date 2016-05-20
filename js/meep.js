@@ -26,7 +26,7 @@ function parseXml(xml)
   {
     muniArr.push($(this).attr('minutes'));
   });
-  $("#j").html("<p>"+ muniArr.sort(function(a, b){return a-b})+"</p>");
+  $("#j").html("<p>"+ muniArr.sort(function(a, b){return a-b}).join(',​​​​')+"</p>");
   clearInterval(fetch);
   fetch = null;
 
@@ -44,7 +44,7 @@ function parseXmlBart(xml)
     }
   });
   var bartValues = bartArr.slice(0,6).sort(function(a, b){return a-b});
-  $("#bart").html("<p>"+ bartValues +"</p>");
+  $("#bart").html("<p>"+ bartValues.join(',​​​​') +"</p>");
   clearInterval(fetch);
   fetch = null;
 }
