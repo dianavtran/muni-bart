@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,200);
 
 body, html {
 	background-color: #2B2B2B;
@@ -26,10 +26,28 @@ p {
 	margin-top: 40px;
 }
 
+.clock {
+	float: left;
+	font-size: 72px;
+	font-family: 'Roboto Mono', sans-serif;
+	font-weight: 200;
+	letter-spacing: -4px;
+	margin-right: 56px;
+}
+
+.date {
+	float: left;
+	display: inline;
+	margin-top: -50px;
+	opacity: .8;
+}
+
 #time {
 	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 500;
 	font-size: 40px;
 	color: #fff;
+	vertical-align: top;
 }
 
 hr {
@@ -37,4 +55,64 @@ hr {
 	border: 2px solid #61CFB7;
 	float: left;
 	margin: 48px 0;
+	clear:both;
+}
+
+@media (max-width:667px) {
+
+	body, html {
+		background-color: #2B2B2B;
+		padding: 16px;
+	}
+
+	h1 {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 30px;
+		color: #fff;
+		font-weight: 600;
+	}
+
+	p {
+		font-family: 'Roboto Mono', sans-serif;
+		font-size: 40px;
+		color: #0BC89D;
+		font-weight: 300;
+		margin: 0 0 40px 0;
+	}
+
+	.transit {
+		margin-top: 40px;
+	}
+
+	.clock {
+		float: left;
+		font-size: 40px;
+		font-family: 'Roboto Mono', sans-serif;
+		font-weight: 200;
+		letter-spacing: -2px;
+		margin-right: 40px;
+	}
+
+	.date {
+		float: left;
+		display: inline;
+		margin-top: -36px;
+		opacity: .8;
+	}
+
+	#time {
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 500;
+		font-size: 24px;
+		color: #fff;
+		vertical-align: top;
+	}
+
+	hr {
+		width: 60px;
+		border: 2px solid #61CFB7;
+		float: left;
+		margin: 24px 0 40px 0;
+		clear:both;
+	}
 }

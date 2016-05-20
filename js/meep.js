@@ -1,5 +1,4 @@
-function fetch()
-{
+var fetch = function() {
   $.ajax({
     type: "GET",
     url: "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=sf-muni&r=J&stopId=13996",
@@ -12,8 +11,8 @@ function fetch()
     dataType: "xml",
     success: parseXmlBart
   });
-  $('p').empty();
   setInterval(fetch, 60000);
+  $('p').empty();
 }
 
 $(document).ready(function() {
@@ -28,6 +27,9 @@ function parseXml(xml)
     muniArr.push($(this).attr('minutes'));
   });
   $("#j").html("<p>"+ muniArr.sort(function(a, b){return a-b})+"</p>");
+  clearInterval(fetch);
+  fetch = null;
+
 }
 
 function parseXmlBart(xml)
@@ -41,16 +43,8 @@ function parseXmlBart(xml)
       }
     }
   });
-  $("#bart").html("<p>"+ bartArr.sort(function(a, b){return a-b}) +"</p>");
+  var bartValues = bartArr.slice(0,6).sort(function(a, b){return a-b});
+  $("#bart").html("<p>"+ bartValues +"</p>");
+  clearInterval(fetch);
+  fetch = null;
 }
-
-
-// function reload(){
-//       var container1 = document.getElementById("j");
-//       var container2 = document.getElementById("bart");
-//       var content1 = container1.innerHTML;
-//       container1.innerHTML= content1;
-//       var content2 = container2.innerHTML;
-//       container2.innerHTML= content2;
-//       console.log('yay');
-// }

@@ -28,12 +28,13 @@
 		(function()
 		{
 		  // instantiate a moment object
+			var time = moment().format('h:mm')
 		  var day = moment().format('dddd');
 			var date = moment().format('MMMM Do YYYY');
 
 		  // display value of moment object in #displayMoment div
 		  var display = document.getElementById('time');
-		  display.innerHTML = day + "<br>" + date;
+		  display.innerHTML = "<span class='clock'>" + time + "</span><span class='date'><br>" + day + "<br>" + date + "</span>";
 		})();
 		</script>
 
