@@ -62,19 +62,19 @@ hr {
 
 	body, html {
 		background-color: #2B2B2B;
-		padding: 16px;
+		padding: 12px;
 	}
 
 	h1 {
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 30px;
+		font-size: 28px;
 		color: #fff;
 		font-weight: 600;
 	}
 
 	p {
 		font-family: 'Roboto Mono', sans-serif;
-		font-size: 40px;
+		font-size: 38px;
 		color: #0BC89D;
 		font-weight: 300;
 		margin: 0 0 40px 0;
@@ -90,20 +90,20 @@ hr {
 		font-family: 'Roboto Mono', sans-serif;
 		font-weight: 200;
 		letter-spacing: -2px;
-		margin-right: 40px;
+		margin-right: 32px;
 	}
 
 	.date {
 		float: left;
 		display: inline;
-		margin-top: -36px;
+		margin-top: -18px;
 		opacity: .8;
 	}
 
 	#time {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 500;
-		font-size: 24px;
+		font-size: 18px;
 		color: #fff;
 		vertical-align: top;
 	}
@@ -112,7 +112,7 @@ hr {
 		width: 60px;
 		border: 2px solid #61CFB7;
 		float: left;
-		margin: 24px 0 40px 0;
+		margin: 24px 0 36px 0;
 		clear:both;
 	}
 }
