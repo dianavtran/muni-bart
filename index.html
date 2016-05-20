@@ -41,4 +41,54 @@
 
 	</body>
 	<script src="js/meep.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+	<script>
+		// var applicationID = '14058BC2';
+		// // var namespace = 'urn:x-cast:com.google.cast.sample.helloworld';
+		// var session = null;
+
+		if (!chrome.cast || !chrome.cast.isAvailable) {
+			setTimeout(initializeCastApi, 1000);
+		}
+
+		initializeCastApi = function() {
+		  var sessionRequest = new chrome.cast.SessionRequest(DEFAULT_MEDIA_RECEIVER_APP_ID);
+		  var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
+		    sessionListener,
+		    receiverListener);
+		  chrome.cast.initialize(apiConfig, onInitSuccess, onError);
+		};
+
+		/**
+		 * initialization success callback
+		 */
+		function onInitSuccess() {
+		  appendMessage("onInitSuccess");
+		}
+
+		/**
+		 * initialization error callback
+		 */
+		function onError(message) {
+		  appendMessage("onError: "+JSON.stringify(message));
+		}
+
+		function sessionListener(e) {
+		  appendMessage('New session ID:' + e.sessionId);
+		  session = e;
+		  session.addUpdateListener(sessionUpdateListener);
+		  session.addMessageListener(namespace, receiverMessage);
+		}
+
+		function receiverListener(e) {
+		  if( e === 'available' ) {
+		    appendMessage("receiver found");
+		  }
+		  else {
+		    appendMessage("receiver list empty");
+		  }
+		}
+
+
+	</script>
 </html>
