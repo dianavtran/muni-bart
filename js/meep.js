@@ -1,7 +1,7 @@
 var fetch = function() {
   $.ajax({
     type: "GET",
-    url: "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=sf-muni&r=J&stopId=13996",
+    url: "http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=sf-muni&r=KJ&stopId=13996",
     dataType: "xml",
     success: parseXml
   });
